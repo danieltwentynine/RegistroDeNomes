@@ -128,7 +128,8 @@ int main(){
 		printf("->Escolha uma das opcoes a seguir:\n\n");
 		printf("\t1 -> Registrar usuario\n");
 		printf("\t2 -> Consultar usuario\n");
-		printf("\t3 -> Excluir usuario\n\n"); // Fim do menu
+		printf("\t3 -> Excluir usuario\n");
+		printf("\t4 -> Sair do sistema\n\n"); // Fim do menu
 
 		printf("Digite a opcao desejada: ");
 		scanf("%d", &opcao); // armazenamento da opção digitada pelo usuário
@@ -148,6 +149,11 @@ int main(){
 		case 3:
 			excluir(); //chama a função excluir
 			break;
+
+        case 4:
+            printf("Ate a proxima!\n");
+            return 0;
+            break;
 
 		default: // caso o usuário digite um número indisponivel no menu
 			printf("Opcao indisponivel!\n");
