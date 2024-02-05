@@ -114,54 +114,67 @@ int main(){
 
 	int opcao = 0; // variável para armazenar a opção que o usuário desejar
 	int i = 1;
+	char senhadigitada[10];
+	int comparacao;
 
-	for (i = 1; i == 1;){
+    printf("-> Cartorio Da EBAC <-\n\n");
+    printf("-> Login de Administrador <-\n");
+    printf("-> Digite sua senha: ");
+    scanf("%s", &senhadigitada);
+
+    comparacao = strcmp(senhadigitada, "admin");
+
+    if(comparacao == 0){
 
         system("cls");
+        for (i = 1; i == 1;){
 
-        setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem do sistema. Ficou definido para portugues.
+            system("cls");
 
-        printf("-> Cartorio Da EBAC <-\n\n"); //Título do sistema
+            setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem do sistema. Ficou definido para portugues.
 
-		printf("-> Menu <-\n\n"); //Inicio do menu
+            printf("-> Cartorio Da EBAC <-\n\n"); //Título do sistema
 
-		printf("->Escolha uma das opcoes a seguir:\n\n");
-		printf("\t1 -> Registrar usuario\n");
-		printf("\t2 -> Consultar usuario\n");
-		printf("\t3 -> Excluir usuario\n");
-		printf("\t4 -> Sair do sistema\n\n"); // Fim do menu
+            printf("-> Menu <-\n\n"); //Inicio do menu
 
-		printf("Digite a opcao desejada: ");
-		scanf("%d", &opcao); // armazenamento da opção digitada pelo usuário
+            printf("->Escolha uma das opcoes a seguir:\n\n");
+            printf("\t1 -> Registrar usuario\n");
+            printf("\t2 -> Consultar usuario\n");
+            printf("\t3 -> Excluir usuario\n");
+            printf("\t4 -> Sair do sistema\n\n"); // Fim do menu
 
-		system("cls"); //limpar a tela
+            printf("Digite a opcao desejada: ");
+            scanf("%d", &opcao); // armazenamento da opção digitada pelo usuário
 
-		switch (opcao)
-		{
-		case 1:
-            registro(); //chama a função registro
-			break;
+            system("cls"); //limpar a tela
 
-		case 2:
-			consulta(); //chama a função consulta
-			break;
+            switch (opcao)
+            {
+            case 1:
+                registro(); //chama a função registro
+                break;
 
-		case 3:
-			excluir(); //chama a função excluir
-			break;
+            case 2:
+                consulta(); //chama a função consulta
+                break;
 
-        case 4:
-            printf("Ate a proxima!\n");
-            return 0;
-            break;
+            case 3:
+                excluir(); //chama a função excluir
+                break;
 
-		default: // caso o usuário digite um número indisponivel no menu
-			printf("Opcao indisponivel!\n");
-			system("pause");
-			break;
-		}
+            case 4:
+                printf("Ate a proxima!\n");
+                return 0;
+                break;
 
+            default: // caso o usuário digite um número indisponivel no menu
+                printf("Opcao indisponivel!\n");
+                system("pause");
+                break;
+            }
+        }
+    }
 
-	}
-	printf("Software desenvolvido por Daniel Moraes Cardoso, através do curso oferecido pela EBAC");
+    printf("Senha incorreta!\n");
+	printf("\nSoftware desenvolvido por Daniel Moraes Cardoso, atraves do curso oferecido pela EBAC.\n");
 }
