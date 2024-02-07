@@ -73,7 +73,7 @@ int consulta(){
     FILE *file;
     file = fopen(cpf, "r"); //abre o arquivo e lê o seu conteudo
 
-    //conodicional caso o arquivo esteja nulo
+    //condicional caso o arquivo esteja nulo
     if(file == NULL){
         printf("CPF NAO LOCALIZADO!\n");
     }
@@ -173,8 +173,8 @@ int main(){
                 break;
             }
         }
+    }else{
+            printf("Senha incorreta!\n");
     }
-
-    printf("Senha incorreta!\n");
 	printf("\nSoftware desenvolvido por Daniel Moraes Cardoso, atraves do curso oferecido pela EBAC.\n");
 }
